@@ -3,43 +3,48 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Koga Cykel</title>
+    <title>Singel View</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+
+    <template>
+        <img class="imgSingle" src="" alt="">
+    </template>
+
     <section id="singleCykel">
 
         <h2 class="title"></h2>
-        <template>
-            <img class="imgSingle" src="" alt="">
-        </template>
-        <h3 class=".materiale"></h3>
-        <h3 class=".weight"></h3>
-        <h3 class=".farve"></h3>
-        <h3 class=".size"></h3>
-        <template>
-            <img class="imgTech" src="" alt="">
-        </template>
-        <p class=".beskrivelse"></p>
-        <h3 class=".pris"></h3>
-
-
         <div class="liste"></div>
+        <h3 class="materiale"></h3>
+        <h3 class="weight"></h3>
+        <h3 class="farve"></h3>
+        <h3 class="size"></h3>
+        <img class="imgTech" src="" alt="">
+        <p class="beskrivelse"></p>
+        <h3 class="pris"></h3>
 
     </section>
 
+
+
+
     <script>
-        document.querySelector("DOMContentLoaded", start);
+        document.addEventListener("DOMContentLoaded", start);
 
         const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/cykler?per_page=50";
         let cykler = [];
 
+
+
         const skabelon = document.querySelector("template");
         const liste = document.querySelector(".liste");
 
-        document.addEventListener("DOMContentLoaded", start);
+
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
 
         function start() {
             hentJson();
@@ -66,26 +71,58 @@
         */
 
         function vis() {
+            liste.innerHTML = "";
 
-            cykler.billeder.forEach(b => {
+            //            document.querySelector("title").textContent = cykel.title.rendered;
 
-                console.log(cykler);
-                const klon = skabelon.cloneNode(true).content;
+            cykler.forEach(cykel => {
+                if (cykel.id == id) {
+                    document.querySelector(".title").textContent = cykel.title.rendered;
+
+//                    cykel.billeder.forEach(b => {
+// const klon = skabelon.cloneNode(true).content;
+//
+// klon.querySelector(".imgSingle").src = b.billeder[0].guid;
+// klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
+// liste.appendChild(klon);
+// klon.querySelector(".imgSingle").src = b.billeder[1].guid;
+// klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
+// liste.appendChild(klon);
+// klon.querySelector(".imgSingle").src = b.billeder[2].guid;
+// klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
+// liste.appendChild(klon);
+// });
+
+                    document.querySelector(".materiale").textContent += "Marteriale: " + cykel.materiale;
+                    document.querySelector(".weight").textContent += "Vægt: " + cykel.vgt;
+                    document.querySelector(".farve").textContent += "Farve: " + cykel.farve;
+                    document.querySelector(".size").textContent += "Størrelser: " + cykel.ml;
+                    document.querySelector(".imgTech").src = cykel.grafisk_tegning.guid;
+                    document.querySelector(".imgTech").alt = cykel.title.rendered;
+                    document.querySelector(".beskrivelse").textContent = cykel.beskrivelse;
+                    document.querySelector(".pris").textContent += "Pris: " + cykel.pris + ".- DKK";
+
+
+
+                }
+
+                //                console.log(cykler);
+                //                const klon = skabelon.cloneNode(true).content;
 
                 //                Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
-                document.querySelector(".title").textContent = cykel.title.rendered;
-                klon.querySelector(".imgSingle").src = b.billeder[0].guid;
-                klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
-                document.querySelector(".materiale").textContent = b.title.rendered + " billede";
 
-                liste.appendChild(klon);
+
+                //                klon.querySelector(".imgSingle").src = b.billeder[0].guid;
+                //                klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
+
+                //                liste.appendChild(klon);
             });
 
-            cykel.billeder.forEach(b => {});
+            //            cykel.billeder.forEach(b => {});
         }
+
     </script>
 
-    <!--    <script src="script.js"></script>-->
 </body>
 
 </html>

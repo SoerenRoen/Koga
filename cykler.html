@@ -18,13 +18,10 @@
     <div class="liste"></div>
 
     <script>
-        document.querySelector("DOMContentLoaded", start);
+        document.addEventListener("DOMContentLoaded", start);
 
         const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/cykler?per_page=50";
         let cykler = [];
-
-        let urlParams = new URLSearchParams(window.location.search);
-        let id = urlParams.get("id");
 
         const skabelon = document.querySelector("template");
         const liste = document.querySelector(".liste");
@@ -61,7 +58,7 @@
                 console.log(cykler);
                 const klon = skabelon.cloneNode(true).content;
 
-                //                Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
+                //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
                 klon.querySelector(".img").src = cykel.billeder[0].guid;
                 klon.querySelector(".img").alt = cykel.title.rendered + " billede";
                 klon.querySelector(".title").textContent = cykel.title.rendered;
@@ -77,6 +74,7 @@
 
             //    cykel.billeder.forEach(b => {});
         }
+
     </script>
 </body>
 
