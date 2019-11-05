@@ -26,6 +26,7 @@
         <p class="beskrivelse"></p>
         <h3 class="pris"></h3>
 
+        <section class="imgcontainer"></section>
     </section>
 
 
@@ -79,19 +80,30 @@
                 if (cykel.id == id) {
                     document.querySelector(".title").textContent = cykel.title.rendered;
 
-//                    cykel.billeder.forEach(b => {
-// const klon = skabelon.cloneNode(true).content;
-//
-// klon.querySelector(".imgSingle").src = b.billeder[0].guid;
-// klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
-// liste.appendChild(klon);
-// klon.querySelector(".imgSingle").src = b.billeder[1].guid;
-// klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
-// liste.appendChild(klon);
-// klon.querySelector(".imgSingle").src = b.billeder[2].guid;
-// klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
-// liste.appendChild(klon);
-// });
+                    console.log(cykel.billeder);
+
+                    cykel.billeder.forEach(b => {
+
+                        console.log(b.guid);
+                        const klon = skabelon.cloneNode(true).content;
+                        klon.querySelector(".imgSingle").src = b.guid;
+                        document.querySelector(".imgcontainer").appendChild(klon);
+
+                    });
+
+                    //                    cykel.billeder.forEach(b => {
+                    // const klon = skabelon.cloneNode(true).content;
+                    //
+                    // klon.querySelector(".imgSingle").src = b.billeder[0].guid;
+                    // klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
+                    // liste.appendChild(klon);
+                    // klon.querySelector(".imgSingle").src = b.billeder[1].guid;
+                    // klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
+                    // liste.appendChild(klon);
+                    // klon.querySelector(".imgSingle").src = b.billeder[2].guid;
+                    // klon.querySelector(".imgSingle").alt = b.title.rendered + " billede";
+                    // liste.appendChild(klon);
+                    // });
 
                     document.querySelector(".materiale").textContent += "Marteriale: " + cykel.materiale;
                     document.querySelector(".weight").textContent += "Vægt: " + cykel.vgt;
@@ -120,7 +132,6 @@
 
             //            cykel.billeder.forEach(b => {});
         }
-
     </script>
 
 </body>

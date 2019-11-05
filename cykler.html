@@ -5,17 +5,61 @@
     <meta charset="UTF-8">
     <title>Koga Cykler</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="Description" content="Danmarks førrende forhandler af koga cykler">
 </head>
 
 <body>
 
-    <template>
-        <article id="cykel"></article>
-        <img class="img" src="" alt="">
-        <h2 class="title"></h2>
-    </template>
+    <header>
 
-    <div class="liste"></div>
+        <div id="logo">
+            <figure>
+                <img src="img/logo/kisspng-logo-koga-electric-bicycle-5b19fdc5529e05.3888018115284300213384.png" alt="">
+            </figure>
+        </div>
+
+        <nav id="navigation">
+            <a href="koga.html">
+                <button>Koga</button>
+            </a>
+            <a href="cykler.html">
+                <button>Cykler</button>
+            </a>
+            <a href="about.html">
+                <button>Om Os</button>
+            </a>
+            <a href="kontakt.html">
+                <button>Kontakt</button>
+            </a>
+        </nav>
+
+    </header>
+
+    <div id="splash">
+        <figure>
+            <img src="img/KKRD5621.jpg" alt="">
+        </figure>
+    </div>
+
+
+
+
+
+    <div id="overskrift">
+        <h1>CYKLER</h1>
+    </div>
+
+    <section id="alleCykler">
+
+        <template id="cyklerTemplate">
+            <article id="cykel"></article>
+            <img class="img" src="" alt="">
+            <h2 class="title"></h2>
+        </template>
+
+        <div class="liste"></div>
+
+    </section>
 
     <script>
         document.addEventListener("DOMContentLoaded", start);
@@ -23,7 +67,7 @@
         const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/cykler?per_page=50";
         let cykler = [];
 
-        const skabelon = document.querySelector("template");
+        const skabelon = document.querySelector("#cyklerTemplate");
         const liste = document.querySelector(".liste");
 
         document.addEventListener("DOMContentLoaded", start);

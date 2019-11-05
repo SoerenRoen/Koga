@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+
 }
 
 img {
@@ -10,3 +11,52 @@ img {
 .img {
     width: 300px;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 500px;
+}
+
+#navigation {
+    display: flex;
+
+    border-bottom: solid 10px #2c80c5;
+    padding: 20px;
+
+    float: right;
+}
+
+#overskrift {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    margin: 0 20px;
+    color: black;
+
+    float: right;
+
+    font-size: 1.5rem;
+    transform: scale(1);
+    transition: .5s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    color: #2c80c5;
+
+}
+
+#alleCykler {
+    display: grid;
+}
+
+#cyklerTemplate {}
