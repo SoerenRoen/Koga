@@ -20,12 +20,17 @@ figure {
     margin: 0;
 }
 
+/*Menu*/
+
 header {
     display: flex;
     justify-content: space-between;
     background-color: #f3f2f1;
     border: solid 1px #52514F;
     padding: 1vw;
+
+    position: sticky;
+    top: 0;
 }
 
 #logo {
@@ -45,7 +50,7 @@ header {
 
 #navigation button {
     font-family: interstate, sans-serif;
-    font-weight: 900;
+    font-weight: 500;
     font-style: normal;
     color: #35393e;
     font-size: 1.2rem;
@@ -76,15 +81,83 @@ button:hover {
     width: 1.3rem;
 }
 
+
+/*Home Page*/
+
+#bjerg {
+    padding: 20px;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: row;
+
+    padding: 20px;
+}
+
+/*
+.welcome_tekst figure img {
+    width: 500px;
+}
+
+.grafisk_cykel figure img {
+    width: 500px;
+
+    position: absolute;
+}
+*/
+
+/*Cykler*/
+
 #overskrift {
     display: flex;
     justify-content: center;
 }
-
-
 
 #alleCykler {
     display: grid;
 }
 
 #cyklerTemplate {}
+
+
+/*Footer*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    border: solid 1px #52514F;
+}
+
+#mykogaandi h2 {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+#citat h2 {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+#social_media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 20%;
+
+    /*    float: right;*/
+}
+
+footer figure img {
+    height: 1.5rem;
+}
