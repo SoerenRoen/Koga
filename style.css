@@ -1,6 +1,14 @@
+/*Fonts*/
+
+
+
+/*html*/
+
 body {
     margin: 0;
     padding: 0;
+    background-color: #f3f2f1;
+
 
 }
 
@@ -8,37 +16,47 @@ img {
     width: 100%;
 }
 
-.img {
-    width: 300px;
+figure {
+    margin: 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    background-color: #f3f2f1;
+    border: solid 1px #52514F;
+    padding: 1vw;
 }
 
 #logo {
-    width: 500px;
+    width: 250px;
 }
 
 #navigation {
     display: flex;
-
-    border-bottom: solid 10px #2c80c5;
-    padding: 20px;
-
+    align-items: center;
+    justify-content: space-between;
     float: right;
+
+    width: 50%;
+
+    padding: 0 20px;
 }
 
-#overskrift {
-    display: flex;
-    justify-content: center;
+#navigation button {
+    font-family: interstate, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #35393e;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
 }
 
 button {
     background-color: transparent;
     border: none;
-    margin: 0 20px;
+    /*    margin: 0 20px;*/
     color: black;
 
     float: right;
@@ -52,8 +70,18 @@ button:hover {
     transform: scale(1.1);
     transition: .5s;
     color: #2c80c5;
-
 }
+
+.search {
+    width: 1.3rem;
+}
+
+#overskrift {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 #alleCykler {
     display: grid;
