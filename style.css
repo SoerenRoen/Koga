@@ -22,6 +22,59 @@ figure {
 
 /*Menu*/
 
+
+#navigation {
+    display: none;
+}
+
+.burgermenu {
+    transition: transform .3s;
+    transform-origin: top;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #f3f2f1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 40;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menuknap {
+    display: inline-block;
+    z-index: 100;
+    right: 10vw;
+    position: fixed;
+    cursor: pointer;
+
+
+    font-family: quicksand, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+
+
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    display: flex;
+
+}
+
+#menuknap:hover {
+    color: white;
+}
+
+
+.hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -35,27 +88,6 @@ header {
 
 #logo {
     width: 250px;
-}
-
-#navigation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    float: right;
-
-    width: 50%;
-
-    padding: 0 20px;
-}
-
-#navigation button {
-    font-family: interstate, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    color: #35393e;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-
 }
 
 button {
@@ -81,6 +113,108 @@ button:hover {
     width: 1.3rem;
 }
 
+@media only screen and (min-width: 720px) {
+
+
+    #menuknap {
+        display: none;
+    }
+
+    .burgermenu {
+        display: none;
+    }
+
+
+    #navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        float: right;
+
+        width: 50%;
+
+        padding: 0 20px;
+    }
+
+    #navigation button {
+        font-family: interstate, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #35393e;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+    }
+
+
+
+
+    /**************/
+
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f3f2f1;
+        border: solid 1px #52514F;
+        padding: 1vw;
+
+        position: sticky;
+        top: 0;
+    }
+
+    #logo {
+        width: 250px;
+    }
+
+    #navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        float: right;
+
+        width: 50%;
+
+        padding: 0 20px;
+    }
+
+    #navigation button {
+        font-family: interstate, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #35393e;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        /*    margin: 0 20px;*/
+        color: black;
+
+        float: right;
+
+        font-size: 1.5rem;
+        transform: scale(1);
+        transition: .5s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        transition: .5s;
+        color: #2c80c5;
+    }
+
+    .search {
+        width: 1.3rem;
+    }
+
+
+}
+
 
 /*Home Page*/
 
@@ -95,31 +229,73 @@ button:hover {
     padding: 20px;
 }
 
-/*
-.welcome_tekst figure img {
-    width: 500px;
-}
-
-.grafisk_cykel figure img {
-    width: 500px;
-
-    position: absolute;
-}
-*/
-
 /*Cykler*/
 
-#overskrift {
+#cykler_overskrift h1 {
+    font-family: roc-grotesk-extrawide, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 7rem;
+    letter-spacing: 4rem;
+    text-align: center;
+    margin-left: 2rem;
+
     display: flex;
     justify-content: center;
+
 }
 
-#alleCykler {
-    display: grid;
+#cykel .title {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #52514F;
 }
 
-#cyklerTemplate {}
+#cykel {
+    padding: 0.5rem;
+}
 
+.galleri {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+    height: 300px;
+
+    position: relative;
+}
+
+.liste {
+    display: flex;
+    position: absolute;
+    transition: all 2s;
+}
+
+.liste img {
+    width: 20vw;
+}
+
+.knapper {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+button.prev {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 4rem;
+    color: #0E7DC7;
+}
+
+button.next {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 4rem;
+    color: #0E7DC7;
+}
 
 /*Footer*/
 
@@ -128,7 +304,7 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    padding: 10px;
+    padding: 0 10px;
     border: solid 1px #52514F;
 }
 

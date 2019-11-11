@@ -6,6 +6,8 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/yje2gmd.css">
+    <link rel="stylesheet" href="https://use.typekit.net/bpk2aai.css">
+
 </head>
 
 
@@ -20,16 +22,16 @@
                 </figure>
             </a>
         </div>
-
-        <nav id="navigation">
-            <a href="koga.html">
-                <button>Koga</button>
-            </a>
+        <div id="menuknap">☰</div>
+        <nav class="burgermenu hidden">
             <a href="cykler.html">
                 <button>Cykler</button>
             </a>
             <a href="about.html">
                 <button>Om Os</button>
+            </a>
+            <a href="koga.html">
+                <button>Koga</button>
             </a>
             <a href="kontakt.html">
                 <button>Kontakt</button>
@@ -41,30 +43,66 @@
                     </figure>
                 </button>
             </a>
+        </nav>
 
+        <nav id="navigation">
+
+            <a href="cykler.html">
+                <button>Cykler</button>
+            </a>
+            <a href="about.html">
+                <button>Om Os</button>
+            </a>
+            <a href="koga.html">
+                <button>Koga</button>
+            </a>
+            <a href="kontakt.html">
+                <button>Kontakt</button>
+            </a>
+            <a href="">
+                <button>
+                    <figure>
+                        <img class="search" src="img/logo/Search.png" alt="">
+                    </figure>
+                </button>
+            </a>
         </nav>
 
     </header>
 
-    <div id="splash">
+    <section id="bjerg">
         <figure>
-            <img src="img/KKRD5621.jpg" alt="">
+            <img src="img/logo/bjerg.svg" alt="">
         </figure>
-    </div>
+    </section>
 
-    <div id="overskrift">
+    <div id="cykler_overskrift">
         <h1>CYKLER</h1>
     </div>
+
+    <section class="galleri">
+
+        <div class="liste"></div>
+
+        <div class="knapper">
+
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+
+    </section>
+
+
 
     <section id="alleCykler">
 
         <template id="cyklerTemplate">
-            <article id="cykel"></article>
-            <img class="img" src="" alt="">
-            <h2 class="title"></h2>
+            <article id="cykel">
+                <img class="img" src="" alt="">
+                <h2 class="title"></h2>
+            </article>
         </template>
 
-        <div class="liste"></div>
 
     </section>
 
@@ -102,7 +140,13 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", start);
+        let pos = 0;
+
+        //FORSØG PÅ LOOP
+        //        let billedeArray;
+        //        let galleri_count = -1;
+
+
 
         const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/cykler?per_page=50";
         let cykler = [];
@@ -114,6 +158,8 @@
 
         function start() {
             hentJson();
+            document.querySelector(".next").addEventListener("click", clickNext);
+            document.querySelector(".prev").addEventListener("click", clickPrev);
         }
 
         async function hentJson() {
@@ -121,19 +167,6 @@
             cykler = await response.json();
             vis();
         }
-        /*
-                <template>
-                <img src....
-                </template>
-
-                const template
-                cykel.billeder.forEach(b =>{
-                const klon = ----
-                klon.src = b.guid;
-                klon.alt =
-                detalje. appendChild(klon);
-                })
-        */
 
         function vis() {
             liste.innerHTML = "";
@@ -142,11 +175,15 @@
                 console.log(cykler);
                 const klon = skabelon.cloneNode(true).content;
 
+
                 //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
                 klon.querySelector(".img").src = cykel.billeder[0].guid;
+
                 klon.querySelector(".img").alt = cykel.title.rendered + " billede";
                 klon.querySelector(".title").textContent = cykel.title.rendered;
+
                 liste.appendChild(klon);
+
 
                 liste.lastElementChild.addEventListener("click", () => {
                     location.href = `cykel_singleview.html?id=${cykel.id}`;
@@ -155,10 +192,42 @@
             });
 
 
+        }
 
-            //    cykel.billeder.forEach(b => {});
+
+        function clickNext() {
+
+            pos -= 20;
+            console.log("NEXT!");
+            document.querySelector(".liste").style.left = pos + "vw";
+
+
+            //FORSØG PÅ LOOP
+            //            galleri_count++;
+            //            if (galleri_count == billedeArray.length) {
+            //                galleri_count = 0;
+            //            }
+            //
+            //            document.querySelector(".img").src = billedeArray[galleri_count].guid;
+
+
+
+
+        }
+
+        function clickPrev() {
+            pos += 20;
+            console.log("PREV!");
+            document.querySelector(".liste").style.left = pos + "vw";
+
+            //FORSØG PÅ LOOP
+            //            galleri_count--;
+            //
+            // if (galleri_count < 0) { // galleri_count=billedeArray.length - 1; // } // // document.querySelector(".img").src=billedeArray[galleri_count].guid;
         }
     </script>
+    <script src="menu_script.js"></script>
+
 </body>
 
 </html>

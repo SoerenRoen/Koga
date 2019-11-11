@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Kontakt</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/yje2gmd.css">
 </head>
@@ -20,16 +20,16 @@
                 </figure>
             </a>
         </div>
-
-        <nav id="navigation">
-            <a href="koga.html">
-                <button>Koga</button>
-            </a>
+        <div id="menuknap">☰</div>
+        <nav class="burgermenu hidden">
             <a href="cykler.html">
                 <button>Cykler</button>
             </a>
             <a href="about.html">
                 <button>Om Os</button>
+            </a>
+            <a href="koga.html">
+                <button>Koga</button>
             </a>
             <a href="kontakt.html">
                 <button>Kontakt</button>
@@ -41,7 +41,29 @@
                     </figure>
                 </button>
             </a>
+        </nav>
 
+        <nav id="navigation">
+
+            <a href="cykler.html">
+                <button>Cykler</button>
+            </a>
+            <a href="about.html">
+                <button>Om Os</button>
+            </a>
+            <a href="koga.html">
+                <button>Koga</button>
+            </a>
+            <a href="kontakt.html">
+                <button>Kontakt</button>
+            </a>
+            <a href="">
+                <button>
+                    <figure>
+                        <img class="search" src="img/logo/Search.png" alt="">
+                    </figure>
+                </button>
+            </a>
         </nav>
 
     </header>
@@ -97,7 +119,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="menu_script.js"></script>
+
 </body>
 
 </html>
