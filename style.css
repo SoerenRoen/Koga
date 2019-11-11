@@ -298,7 +298,44 @@ button.next {
 }
 
 /*Koga*/
+@media screen and(min-width: 550px) {
+    .koga_container {
+        grid-template-areas:
+            " sidebar main main main";
+    }
+}
 
+@media screen and(min-width: 800px) {
+    .koga_container {
+        grid-template-areas:
+            "sidebar"
+            " main";
+    }
+}
+
+.koga_overskrift {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 4rem;
+    color: #0E7DC7;
+}
+
+.koga_container {
+    display: grid;
+    grid-template-areas:
+        "sidebar"
+        "main";
+}
+
+.koga_container .item-a {
+    grid-area: sidebar;
+    background: papayawhip;
+}
+
+.koga_container .item-b {
+    grid-area: main;
+    background: gold;
+}
 
 /*Om Os*/
 
