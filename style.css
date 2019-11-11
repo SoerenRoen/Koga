@@ -236,13 +236,12 @@ button:hover {
     font-weight: 200;
     font-style: normal;
     font-size: 7rem;
-    letter-spacing: 4rem;
+    /*    letter-spacing: 4rem;*/
     text-align: center;
-    margin-left: 2rem;
+    /*    margin-left: 2rem;*/
 
-    display: flex;
-    justify-content: center;
-
+    /*    display: flex;*/
+    /*    justify-content: center;*/
 }
 
 #cykel .title {
@@ -297,22 +296,47 @@ button.next {
     color: #0E7DC7;
 }
 
+
+/*FILTER KNAPPER*/
+
+#filter_knapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 20px;
+}
+
+#filter_knapper button {
+    border-radius: 5%;
+    font-weight: 100;
+}
+
+.filter_valgt {
+    color: #0E7DC7;
+
+}
+
 /*Koga*/
 
 
 /*Om Os*/
 
-.about_overskift {
-    font-family: interstate, sans-serif;
-    font-weight: 100;
-    font-size: 4rem;
-    color: #0E7DC7;
-}
-
-.about_liste {
+#om_os {
     padding: 20px;
 }
 
+.about_overskrift {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    color: #52514F;
+}
+
+.about_liste {}
+
+#om_1 {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /*Footer*/
 
