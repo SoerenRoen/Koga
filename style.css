@@ -225,17 +225,18 @@ button:hover {
 
 /*Cykler*/
 
+
+
 #cykler_overskrift h1 {
+    display: grid;
+    width: 100%;
     font-family: roc-grotesk-extrawide, sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 7rem;
-    /*    letter-spacing: 4rem;*/
+    font-size: 7em;
+    letter-spacing: 3rem;
     text-align: center;
-    /*    margin-left: 2rem;*/
 
-    /*    display: flex;*/
-    /*    justify-content: center;*/
 }
 
 #cykel .title {
@@ -243,6 +244,7 @@ button:hover {
     font-weight: 100;
     font-size: 1rem;
     color: #52514F;
+    text-align: center;
 }
 
 
@@ -283,6 +285,7 @@ button.prev {
     font-weight: 100;
     font-size: 4rem;
     color: #0E7DC7;
+    background-color: #f3f2f1;
 }
 
 button.next {
@@ -290,6 +293,7 @@ button.next {
     font-weight: 100;
     font-size: 4rem;
     color: #0E7DC7;
+    background-color: #f3f2f1;
 }
 
 /*Koga*/
@@ -306,6 +310,8 @@ button.next {
             "sidebar"
             " main";
     }
+
+
 }
 
 .filosofi_overskrift {
