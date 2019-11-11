@@ -232,36 +232,32 @@
             vis();
         }
 
+        let counter = 0;
+        // const liste = document.querySelector(".liste");
+
 
         function clickNext() {
+            console.log(cykler.length)
+            counter++;
+            if (counter >= cykler.length - 3) {
 
+                pos = 20;
+                counter = 0;
+            }
             pos -= 20;
-            console.log("NEXT!");
-            document.querySelector(".liste").style.left = pos + "vw";
-
-
-            //FORSØG PÅ LOOP
-            //            galleri_count++;
-            //            if (galleri_count == billedeArray.length) {
-            //                galleri_count = 0;
-            //            }
-            //
-            //            document.querySelector(".img").src = billedeArray[galleri_count].guid;
-
-
-
-
+            liste.style.left = pos + "vw";
         }
 
         function clickPrev() {
-            pos += 20;
-            console.log("PREV!");
-            document.querySelector(".liste").style.left = pos + "vw";
+            counter--
+            if (counter < 0) {
 
-            //FORSØG PÅ LOOP
-            //            galleri_count--;
-            //
-            // if (galleri_count < 0) { // galleri_count=billedeArray.length - 1; // } // // document.querySelector(".img").src=billedeArray[galleri_count].guid;
+                pos = -(cykler.length - 3) * 20;
+
+                counter = cykler.length;
+            }
+            pos += 20;
+            liste.style.left = pos + "vw";
         }
 
     </script>
