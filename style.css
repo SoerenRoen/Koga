@@ -297,10 +297,19 @@ button.next {
     color: #0E7DC7;
 }
 
-
 /*Koga*/
 
-.koga_liste {
+
+/*Om Os*/
+
+.about_overskift {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 4rem;
+    color: #0E7DC7;
+}
+
+.about_liste {
     padding: 20px;
 }
 
