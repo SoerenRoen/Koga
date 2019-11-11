@@ -70,14 +70,23 @@
 
     </header>
 
-    <section id="bjerg">
+    <div id="bjerg">
         <figure>
             <img src="img/logo/bjerg.svg" alt="">
         </figure>
-    </section>
+    </div>
 
     <div id="cykler_overskrift">
         <h1>CYKLER</h1>
+    </div>
+
+    <!--   KNAPPER TIL FILTER-->
+    <div id="filter_knapper">
+        <button class="filter filter_valgt" data-kategori="Alle">Alle</button>
+        <button class="filter" data-kategori="Trekking">Trekking</button>
+        <button class="filter" data-kategori="Race">Racing</button>
+        <button class="filter" data-kategori="E-bike">E-bike</button>
+        <button class="filter" data-kategori="City Tour">City Tour</button>
     </div>
 
     <section class="galleri">
@@ -91,8 +100,6 @@
         </div>
 
     </section>
-
-
 
     <section id="alleCykler">
 
@@ -150,6 +157,7 @@
 
         const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/cykler?per_page=50";
         let cykler = [];
+        let filter = "alle"
 
         const skabelon = document.querySelector("#cyklerTemplate");
         const liste = document.querySelector(".liste");
@@ -158,6 +166,7 @@
 
         function start() {
             hentJson();
+            knapperVirker()
             document.querySelector(".next").addEventListener("click", clickNext);
             document.querySelector(".prev").addEventListener("click", clickPrev);
         }
@@ -172,26 +181,50 @@
             liste.innerHTML = "";
 
             cykler.forEach(cykel => {
-                console.log(cykler);
-                const klon = skabelon.cloneNode(true).content;
+
+                if (filter == "alle" || filter == cykel.kategori) {
+                    console.log(cykler);
+                    const klon = skabelon.cloneNode(true).content;
+
+                    //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
+                    klon.querySelector(".img").src = cykel.billeder[0].guid;
+
+                    klon.querySelector(".img").alt = cykel.title.rendered + " billede";
+                    klon.querySelector(".title").textContent = cykel.title.rendered;
+
+                    liste.appendChild(klon);
 
 
-                //  Billederne ligger i et array, og vi benytter os da af [0], for at vise det første billede i arrayet
-                klon.querySelector(".img").src = cykel.billeder[0].guid;
+                    liste.lastElementChild.addEventListener("click", () => {
+                        location.href = `cykel_singleview.html?id=${cykel.id}`;
+                    });
 
-                klon.querySelector(".img").alt = cykel.title.rendered + " billede";
-                klon.querySelector(".title").textContent = cykel.title.rendered;
-
-                liste.appendChild(klon);
-
-
-                liste.lastElementChild.addEventListener("click", () => {
-                    location.href = `cykel_singleview.html?id=${cykel.id}`;
-                });
-
+                }
             });
 
 
+        }
+
+        function knapperVirker() {
+            // får alle knapper til at virke
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+        }
+
+        function filtrering() {
+            filter = this.dataset.kategori;
+
+            // styrer overskriften
+            document.querySelector("h1").textContent = this.textContent;
+
+            // knapperne skifter farve
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("filter_valgt");
+            })
+            this.classList.add("filter_valgt");
+
+            vis();
         }
 
 
@@ -225,6 +258,7 @@
             //
             // if (galleri_count < 0) { // galleri_count=billedeArray.length - 1; // } // // document.querySelector(".img").src=billedeArray[galleri_count].guid;
         }
+
     </script>
     <script src="menu_script.js"></script>
 
