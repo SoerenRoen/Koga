@@ -245,6 +245,7 @@ button:hover {
     color: #52514F;
 }
 
+
 #cykel {
     padding: 0.5rem;
 }
@@ -347,7 +348,7 @@ button.next {
 /*FILTER KNAPPER*/
 #filter_knapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     margin-bottom: 20px;
 }
 
