@@ -306,6 +306,13 @@ button.next {
     }
 }
 
+.filosofi_overskrift {
+    font-family: roc-grotesk-extrawide, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 7rem;
+}
+
 .koga_overskrift {
     font-family: interstate, sans-serif;
     font-weight: 100;
