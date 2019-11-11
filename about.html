@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Om Os</title>
+    <title>Koga's Historie</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/yje2gmd.css">
 </head>
@@ -68,18 +68,19 @@
 
     </header>
 
-    <h1></h1>
+    <template id="koga_template">
+        <p class="tekst"></p>
+    </template>
 
-    <article class="koga">
-        <div class="koga_tekst">
-            <p></p>
-            <p></p>
-        </div>
-        <figure>
-            <img src="" alt="">
-        </figure>
-    </article>
+    <h2 class="about_overskirft">
 
+    </h2>
+
+    <figure>
+
+    </figure>
+
+    <div class="about_liste"></div>
 
     <footer>
 
@@ -114,7 +115,46 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/koga";
+        let koga = [];
+
+        const skabelon = document.querySelector("#koga_template");
+        const liste = document.querySelector(".about_liste");
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            koga = await response.json();
+            vis();
+        }
+
+        function vis() {
+            liste.innerHTML = "";
+
+            koga.forEach(koga_single => {
+                console.log(koga);
+                const klon = skabelon.cloneNode(true).content;
+
+                klon.querySelector(".tekst").innerHTML = koga_single.content.rendered;
+                liste.appendChild(klon);
+
+            });
+
+
+
+            //    cykel.billeder.forEach(b => {});
+        }
+    </script>
     <script src="menu_script.js"></script>
+
 </body>
 
 </html>
