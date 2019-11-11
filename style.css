@@ -147,12 +147,6 @@ button:hover {
     }
 
 
-
-
-    /**************/
-
-
-
     header {
         display: flex;
         justify-content: space-between;
@@ -296,7 +290,6 @@ button.next {
     color: #0E7DC7;
 }
 
-<<<<<<< HEAD
 /*Koga*/
 @media screen and(min-width: 550px) {
     .koga_container {
@@ -336,11 +329,14 @@ button.next {
     grid-area: main;
     background: gold;
 }
-=======
+
+#cykel_sortering {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /*FILTER KNAPPER*/
->>>>>>> origin/master
-
 #filter_knapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
