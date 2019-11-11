@@ -85,6 +85,15 @@
         </figure>
     </article>
 
+    <template id="kontakt_id">
+        <div class="kontakt_div">
+            <h2 class="kontakt_overskrift"></h2>
+            <p class="kontakt_tekst"></p>
+        </div>
+    </template>
+
+    <div class="kontakt_liste"></div>
+
 
     <footer>
 
@@ -118,6 +127,46 @@
             </a>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/kontakt";
+        let koga = [];
+
+        const skabelon = document.querySelector("#kontakt_id");
+        const liste = document.querySelector(".kontakt_liste");
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentJson();
+        }
+
+        async function hentJson() {
+            const response = await fetch(url);
+            kontakt = await response.json();
+            vis();
+        }
+
+        function vis() {
+            liste.innerHTML = "";
+
+            kontakt.forEach(kontakt_single => {
+                console.log(kontakt);
+                const klon = skabelon.cloneNode(true).content;
+
+                klon.querySelector(".kontakt_overskrift").textContent = kontakt_single.overskrift;
+                klon.querySelector(".kontakt_tekst").innerHTML = kontakt_single.content.rendered;
+                liste.appendChild(klon);
+
+            });
+
+
+
+            //    cykel.billeder.forEach(b => {});
+        }
+    </script>
 
     <script src="menu_script.js"></script>
 
