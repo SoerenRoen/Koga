@@ -252,49 +252,14 @@ button:hover {
     padding: 0.5rem;
 }
 
-.galleri {
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-
-    height: 300px;
-
-    position: relative;
+#alleCykler {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.liste {
-    display: flex;
-    position: absolute;
-    left: 0;
-    transition: all 2s;
-}
+#cyklerTemplate {}
 
-.liste img {
-    width: 20vw;
-}
 
-.knapper {
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-}
-
-button.prev {
-    font-family: interstate, sans-serif;
-    font-weight: 100;
-    font-size: 4rem;
-    color: #0E7DC7;
-    background-color: #f3f2f1;
-}
-
-button.next {
-    font-family: interstate, sans-serif;
-    font-weight: 100;
-    font-size: 4rem;
-    color: #0E7DC7;
-    background-color: #f3f2f1;
-}
 
 /*Koga*/
 @media screen and(min-width: 550px) {

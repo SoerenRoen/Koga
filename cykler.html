@@ -92,31 +92,20 @@
             <button class="filter" data-kategori="City Tour">City Tour</button>
         </div>
 
-        <div class="galleri">
-
-            <div class="liste"></div>
-
-            <div class="knapper">
-
-                <button class="prev">&lt;</button>
-                <button class="next">&gt;</button>
-            </div>
-
-        </div>
 
     </section>
 
-    <section id="alleCykler">
+    <section id="alleCykler"></section>
 
-        <template id="cyklerTemplate">
-            <article id="cykel">
-                <img class="img" src="" alt="">
-                <h2 class="title"></h2>
-            </article>
-        </template>
+    <template id="cyklerTemplate">
+        <article id="cykel">
+            <img class="img" src="" alt="">
+            <h2 class="title"></h2>
+        </article>
+    </template>
 
 
-    </section>
+
 
     <footer>
 
@@ -160,15 +149,13 @@
         let filter = "alle"
 
         const skabelon = document.querySelector("#cyklerTemplate");
-        const liste = document.querySelector(".liste");
+        const liste = document.querySelector("#alleCykler");
 
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             hentJson();
             knapperVirker()
-            document.querySelector(".next").addEventListener("click", clickNext);
-            document.querySelector(".prev").addEventListener("click", clickPrev);
         }
 
         async function hentJson() {
@@ -225,33 +212,6 @@
             this.classList.add("filter_valgt");
 
             vis();
-        }
-
-        let counter = 0;
-
-
-        function clickNext() {
-            console.log(cykler.length)
-            counter++;
-            if (counter >= cykler.length - 3) {
-
-                pos = 20;
-                counter = 0;
-            }
-            pos -= 20;
-            liste.style.left = pos + "vw";
-        }
-
-        function clickPrev() {
-            counter--
-            if (counter < 0) {
-
-                pos = -(cykler.length - 3) * 20;
-
-                counter = cykler.length;
-            }
-            pos += 20;
-            liste.style.left = pos + "vw";
         }
     </script>
     <script src="menu_script.js"></script>
