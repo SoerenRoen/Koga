@@ -259,6 +259,9 @@ button:hover {
 
 #cyklerTemplate {}
 
+/*single view på cykler*/
+
+
 
 
 /*Koga*/
@@ -338,23 +341,63 @@ button:hover {
 
 /*Om Os*/
 
-#om_os {
-    padding: 20px;
-}
+
 
 .about_overskrift {
     font-family: interstate, sans-serif;
     font-weight: 100;
     font-size: 2rem;
     color: #52514F;
+    margin: 5px;
+    padding: 10px;
 }
 
-.about_liste {}
+.about_liste {
+    font-family: interstate, sans-serif;
+    width: 500px;
+    padding: 10px;
+    margin: 5px;
+}
 
 #om_1 {
-    display: flex;
-    flex-wrap: wrap;
+    padding: 30px;
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
 }
+
+.kasse {
+    grid-column: 1/2;
+}
+
+.billede_bjerg {
+    max-width: 500px;
+    padding: 20px;
+    left: 5px;
+}
+
+.billede1 {
+    position top: 100vw;
+    position left: 900vw;
+    max-width: 700px;
+    max-height: 500px;
+}
+
+.billede2 {
+    position top: 600vw;
+    right: 1200vw;
+    max-width: 200px;
+    max-height: 400px;
+
+}
+
+.billede3 {
+    max-width: 700px;
+    max-height: 500px;
+    position top: 700vw;
+    position left: 200vw;
+}
+
+
 
 /*Footer*/
 

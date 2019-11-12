@@ -3,16 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Koga's Historie</title>
+    <title>Om Koga Center København</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/yje2gmd.css">
 </head>
 
-
 <body>
-
     <header>
-
         <div id="logo">
             <a href="index.html">
                 <figure>
@@ -44,7 +41,6 @@
         </nav>
 
         <nav id="navigation">
-
             <a href="cykler.html">
                 <button>Cykler</button>
             </a>
@@ -65,49 +61,46 @@
                 </button>
             </a>
         </nav>
-
     </header>
 
     <template id="koga_template">
         <p class="tekst"></p>
     </template>
 
-    <section id="om_os">
-        <div id="om_1">
+
+    <div id="om_1">
+
+        <div class="kasse">
             <h1 class="about_overskrift">KOGA CENTER COPENHAGEN</h1>
 
-            <figure>
+            <div class="billede_bjerg">
                 <img src="img/logo/bjerg.svg" alt="">
-            </figure>
-
-            <div class="about_liste"></div>
-
-            <figure>
-                <img src="img/gc_2.svg" alt="">
-            </figure>
-
+            </div>
         </div>
 
-        <div id="om_2">
+        <div class="about_liste"></div>
 
 
-            <figure>
-                <img src="img/%E2%80%9CDet%20er%20k%C3%B8returen,%20der%20s%C3%A6lger%20cyklen%E2%80%9D.svg" alt="">
-            </figure>
+    </div>
 
-            <div class="about_liste"></div>
-
-            <figure>
-                <img src="img/GC3.svg" alt="">
-            </figure>
-
-        </div>
+    <div class="billede1">
+        <img src="img/gc_2.svg" alt="">
+    </div>
 
 
-    </section>
+    <div class="billede2">
+        <img src="img/%E2%80%9CDet%20er%20k%C3%B8returen,%20der%20s%C3%A6lger%20cyklen%E2%80%9D.svg" alt="">
+    </div>
+
+    <div class="about_liste"></div>
+
+    <div class="billede3">
+        <img src="img/GC3.svg" alt="">
+    </div>
+
+
 
     <footer>
-
         <div id="mykogaandi">
             <h2>#MYKOGAANDI</h2>
         </div>
@@ -115,8 +108,6 @@
         <div id="citat">
             <h2>COPYRIGHT KOGA CENTER COPENHAGEN 2019 | ALL RIGHTS RESERVED</h2>
         </div>
-
-
 
 
         <div id="social_media">
@@ -171,18 +162,9 @@
 
                 klon.querySelector(".tekst").innerHTML = koga_single.content.rendered;
                 liste.appendChild(klon);
-
             });
-
-
-
-            //    cykel.billeder.forEach(b => {});
         }
     </script>
     <script src="menu_script.js"></script>
 
-</body>
-
-</html>
-
-
+</body></html>
