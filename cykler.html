@@ -203,7 +203,7 @@
             filter = this.dataset.kategori;
 
             // styrer overskriften
-            document.querySelector("h1").textContent = this.textContent;
+            //            document.querySelector("h1").textContent = this.textContent;
 
             // knapperne skifter farve
             document.querySelectorAll(".filter").forEach(elm => {
@@ -213,7 +213,40 @@
 
             vis();
         }
+<<<<<<< HEAD
+=======
+
+        let counter = 0;
+
+
+        function clickNext() {
+            console.log(cykler.length)
+            counter++;
+            if (counter >= cykler.length - 3) {
+
+                pos = 20;
+                counter = 0;
+            }
+            pos -= 20;
+            liste.style.left = pos + "vw";
+        }
+
+        function clickPrev() {
+            counter--
+            if (counter < 0) {
+
+                pos = -(cykler.length - 3) * 20;
+
+                counter = cykler.length;
+            }
+            pos += 20;
+            liste.style.left = pos + "vw";
+        }
+
+>>>>>>> origin/master
     </script>
     <script src="menu_script.js"></script>
 
-</body></html>
+</body>
+
+</html>
