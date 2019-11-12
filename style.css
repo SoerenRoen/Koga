@@ -262,22 +262,8 @@ button:hover {
 
 
 /*Koga*/
-@media screen and(min-width: 550px) {
-    .koga_container {
-        grid-template-areas:
-            " sidebar main main main";
-    }
-}
-
-@media screen and(min-width: 800px) {
-    .koga_container {
-        grid-template-areas:
-            "sidebar"
-            " main";
-    }
 
 
-}
 
 .filosofi_overskrift {
     font-family: roc-grotesk-extrawide, sans-serif;
