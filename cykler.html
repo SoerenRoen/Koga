@@ -82,18 +82,18 @@
 
     <!--   KNAPPER TIL FILTER-->
 
-    <section id="cykel_sortering">
+    <!--    <section id="cykel_sortering">-->
 
-        <div id="filter_knapper">
-            <button class="filter filter_valgt" data-kategori="alle">Alle</button>
-            <button class="filter" data-kategori="Trekking">Trekking</button>
-            <button class="filter" data-kategori="Race">Racing</button>
-            <button class="filter" data-kategori="E-bike">E-bike</button>
-            <button class="filter" data-kategori="City Tour">City Tour</button>
-        </div>
+    <div id="filter_knapper">
+        <button class="filter filter_valgt" data-kategori="alle">Alle</button>
+        <button class="filter" data-kategori="Trekking">Trekking</button>
+        <button class="filter" data-kategori="Race">Racing</button>
+        <button class="filter" data-kategori="E-bike">E-bike</button>
+        <button class="filter" data-kategori="City Tour">City Tour</button>
+    </div>
 
 
-    </section>
+
 
     <section id="alleCykler"></section>
 
@@ -213,40 +213,7 @@
 
             vis();
         }
-<<<<<<< HEAD
-=======
-
-        let counter = 0;
-
-
-        function clickNext() {
-            console.log(cykler.length)
-            counter++;
-            if (counter >= cykler.length - 3) {
-
-                pos = 20;
-                counter = 0;
-            }
-            pos -= 20;
-            liste.style.left = pos + "vw";
-        }
-
-        function clickPrev() {
-            counter--
-            if (counter < 0) {
-
-                pos = -(cykler.length - 3) * 20;
-
-                counter = cykler.length;
-            }
-            pos += 20;
-            liste.style.left = pos + "vw";
-        }
-
->>>>>>> origin/master
     </script>
     <script src="menu_script.js"></script>
 
-</body>
-
-</html>
+</body></html>

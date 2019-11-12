@@ -20,6 +20,7 @@ figure {
     margin: 0;
 }
 
+
 /*Menu*/
 
 
@@ -228,13 +229,12 @@ button:hover {
 
 
 #cykler_overskrift h1 {
-    display: grid;
-    width: 100%;
+
     font-family: roc-grotesk-extrawide, sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 7em;
-    letter-spacing: 3rem;
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
     text-align: center;
 
 }
@@ -244,7 +244,6 @@ button:hover {
     font-weight: 100;
     font-size: 1rem;
     color: #52514F;
-    text-align: center;
 }
 
 
@@ -254,30 +253,41 @@ button:hover {
 
 #alleCykler {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
 }
 
 #cyklerTemplate {}
 
 
 
+/*FILTER KNAPPER*/
+
+/*
+#cykel_sortering {
+    display: flex;
+    flex-direction: column;
+}
+*/
+
+#filter_knapper {
+    display: grid;
+/*    grid-template-rows: repeat(5, 1fr);*/
+    margin-bottom: 20px;
+    grid-gap: 15px;
+}
+
+#filter_knapper button {
+    border-radius: 5%;
+    font-weight: 100;
+}
+
+.filter_valgt {
+    color: #0E7DC7;
+
+}
+
 /*Koga*/
-@media screen and(min-width: 550px) {
-    .koga_container {
-        grid-template-areas:
-            " sidebar main main main";
-    }
-}
-
-@media screen and(min-width: 800px) {
-    .koga_container {
-        grid-template-areas:
-            "sidebar"
-            " main";
-    }
-
-
-}
 
 .filosofi_overskrift {
     font-family: roc-grotesk-extrawide, sans-serif;
@@ -310,28 +320,7 @@ button:hover {
     background: gold;
 }
 
-#cykel_sortering {
-    display: flex;
-    flex-direction: column;
-}
 
-
-/*FILTER KNAPPER*/
-#filter_knapper {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin-bottom: 20px;
-}
-
-#filter_knapper button {
-    border-radius: 5%;
-    font-weight: 100;
-}
-
-.filter_valgt {
-    color: #0E7DC7;
-
-}
 
 /*Koga*/
 
@@ -395,4 +384,41 @@ footer {
 
 footer figure img {
     height: 1.5rem;
+}
+
+/* MEDIA QUERIES */
+
+
+@media screen and (min-width: 550px) {
+    #cykler_overskrift h1 {
+        font-size: 7rem;
+        letter-spacing: 4rem;
+    }
+
+    #alleCykler {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #filter_knapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin-bottom: 20px;
+    }
+
+    .koga_container {
+        grid-template-areas:
+            " sidebar main main main";
+    }
+
+}
+
+@media screen and(min-width: 800px) {
+    .koga_container {
+        grid-template-areas:
+            "sidebar"
+            " main";
+    }
+
+
 }
