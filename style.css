@@ -22,10 +22,14 @@ figure {
     position: absolute;
     background-image: url(img/logo/bjerg.svg);
     width: 99%;
-    height: 26%;
+    height: 13%;
     padding: 20px;
+    object-fit: contain;
+}
 
-
+#bjerg_container {
+    height: 26%;
+    overflow: hidden;
 }
 
 
@@ -255,6 +259,10 @@ button:hover {
     color: #52514F;
 }
 
+#cykel img {
+    width: 100%;
+}
+
 
 #cykel {
     padding: 0.5rem;
@@ -268,9 +276,45 @@ button:hover {
 
 #cyklerTemplate {}
 
-/*single view på cykler*/
+/*Cykler Singleview*/
 
+#singleCykel {
+    /*    display: flex;*/
+    /*    justify-content: space-around;*/
+}
 
+.first_part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.first_part img {
+    height: 50vw;
+    width: auto;
+    float: right;
+    opacity: 0.5;
+    position: relative;
+    /*    grid-column-start: 2;*/
+
+}
+
+.first_part .title {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    color: #2c80c5;
+    justify-self: center;
+}
+
+#singleCykel h3 {
+    font-family: interstate, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
 
 
 
@@ -477,6 +521,66 @@ footer figure img {
             "sidebar"
             " main";
     }
+}
 
+/*Kontakt*/
+
+/*
+.kontakt h1 {
+    font-family: interstate, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #8e8e8e;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 10px;
+}
+*/
+
+.kontakt_liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.kontakt_overskrift {
+    font-family: interstate, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #8e8e8e;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.kontakt_tekst {
+    font-family: interstate, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.kontakt_tekst p {
+    margin: 10px;
+}
+
+
+/*Google Maps*/
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 400px;
+    width: 600px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 400px;
+    width: 600px;
+    /*    align-self: center;*/
 
 }

@@ -75,8 +75,10 @@
 
     <section id="singleCykel">
 
-        <h2 class="title"></h2>
-        <div class="liste"></div>
+        <div class="first_part">
+            <h2 class="title"></h2>
+            <img src="" alt="" class="preview_cykel">
+        </div>
         <h3 class="materiale"></h3>
         <h3 class="weight"></h3>
         <h3 class="farve"></h3>
@@ -136,6 +138,7 @@
 
         let urlParams = new URLSearchParams(window.location.search);
         let id = urlParams.get("id");
+        let pos = 0;
 
         function start() {
             hentJson();
@@ -169,6 +172,8 @@
             cykler.forEach(cykel => {
                 if (cykel.id == id) {
                     document.querySelector(".title").textContent = cykel.title.rendered;
+                    document.querySelector(".preview_cykel").src = cykel.billeder[0].guid;
+                    document.querySelector(".preview_cykel").alt = cykel.title.rendered + " billede";
 
                     console.log(cykel.billeder);
 
@@ -222,6 +227,7 @@
 
             //            cykel.billeder.forEach(b => {});
         }
+
     </script>
 
     <script src="menu_script.js"></script>
