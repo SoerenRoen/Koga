@@ -18,6 +18,10 @@ img {
     width: 100%;
 }
 
+p {
+    margin: 0;
+}
+
 figure {
     margin: 0;
 }
@@ -432,14 +436,22 @@ button:hover {
 
 /*Koga*/
 
+#koga_bjerg {
+    margin: 0px 40px;
+}
 
-.filosofi_overskrift {
+#koga_bjerg .filosofi_overskrift {
     font-family: roc-grotesk-extrawide, sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 2.5rem;
     text-transform: uppercase;
     color: #52514F;
+    margin: 40px 0px 0px 60px;
+}
+
+#koga_bjerg img {
+    padding: 0px 40px 80px 40px;
 }
 
 
@@ -447,25 +459,10 @@ button:hover {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
+    grid-template-rows: 1fr;
+    margin: 0px 40px 20px 40px;
 }
 
-
-
-/*
-.koga_quote {
-    grid-column: 1 / span 1;
-    grid-row: 2;
-    padding: 2rem;
-
-    font-family: interstate-condensed, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-
-
-}
-*/
 
 .koga_container h2 {
     font-family: interstate, sans-serif;
@@ -478,43 +475,43 @@ button:hover {
 
 .first_koga {
     grid-column: 1 /span 1;
+    padding: 20px;
 }
 
-
-/*
-
-
-.koga_punch {
-    grid-column: 1 / span 1;
-    grid-row: 2;
-    padding: 3rem;
-
-    font-family: interstate, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+.koga_quote {
+    font-family: interstate-condensed, sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
     color: #52514F;
-    font-size: 1rem;
+    margin: 0;
 }
-*/
+
+.koga_overskrift {
+    margin: 0;
+}
 
 .koga_tekst {
     grid-column: 2 / span 4;
-    grid-row: 2;
     padding: 3rem;
+}
 
+.koga_tekst p {
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.koga_tekst a {
+    color: #0E7DC7;
 }
 
 .second_koga {
     grid-column: 2 /span 4;
+    padding: 20px;
 }
 
-.koga_quote {
 
-    font-family: interstate-condensed, sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    color: #52514F;
-}
+
+
 
 
 
