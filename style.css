@@ -41,31 +41,39 @@ figure {
 /*Menu*/
 
 
-#navigation {
-    display: none;
-}
+/*Menu*/
 
-.burgermenu {
+#menu {
     transition: transform .3s;
     transform-origin: top;
     position: fixed;
     right: 0;
     top: 0;
     background-color: #f3f2f1;
-    width: 100vw;
-    height: 100vh;
-    z-index: 40;
-    padding: 30px;
+    width: 100%;
+    /*    height: 100%;*/
+    z-index: 50;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+#menu a {
+    padding: 10px 0 50px;
+}
+
+#menu a:nth-child(1) {
+    margin-top: 40px;
+}
+
 
 #menuknap {
     display: inline-block;
     z-index: 100;
     right: 10vw;
     position: fixed;
+    color: #35393E;
     cursor: pointer;
 
 
@@ -74,12 +82,9 @@ figure {
     font-style: normal;
     font-size: 30px;
 
-
     width: 40px;
     height: 40px;
     text-align: center;
-
-    display: flex;
 
 }
 
@@ -89,9 +94,10 @@ figure {
 
 
 .hidden {
-    transform: translateY(-100%);
+    transform: translateX(100%);
     opacity: 0;
 }
+
 
 header {
     display: flex;
@@ -102,6 +108,7 @@ header {
 
     position: sticky;
     top: 0;
+
     z-index: 99;
 }
 
@@ -112,7 +119,7 @@ header {
 button {
     background-color: transparent;
     border: none;
-    /*    margin: 0 20px;*/
+    margin: 0 20px;
     color: black;
 
     float: right;
@@ -132,30 +139,84 @@ button:hover {
     width: 1.3rem;
 }
 
-@media only screen and (min-width: 720px) {
+
+
+@media only screen and (min-width: 1080px) {
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+
+    #menu a {
+        padding: 0px 0 0px;
+    }
+
+    #menu a:nth-child(1) {
+        margin-top: 0px;
+    }
+
+    header #menu {
+        justify-content: flex-end;
+        background-color: #f3f2f1;
+        width: 100%;
+        z-index: 40;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px 60px;
+        width: 100%;
+        position: fixed;
+        z-index: 30;
+
+        background-color: #f3f2f1;
+
+    }
+
+
+    header nav a {
+        font-family: interstate, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #35393e;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+
+    }
+
 
 
     #menuknap {
         display: none;
     }
 
-    .burgermenu {
-        display: none;
-    }
-
-
-    #navigation {
+    #menu {
         display: flex;
         align-items: center;
         justify-content: space-between;
         float: right;
 
         width: 50%;
+        /*        height: 50%;*/
 
         padding: 0 20px;
     }
 
-    #navigation button {
+    #menu button {
         font-family: interstate, sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -179,9 +240,12 @@ button:hover {
 
     #logo {
         width: 250px;
+        z-index: 100;
     }
 
-    #navigation {
+
+    /*
+    .navigation {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -192,7 +256,7 @@ button:hover {
         padding: 0 20px;
     }
 
-    #navigation button {
+    .navigation button {
         font-family: interstate, sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -201,6 +265,7 @@ button:hover {
         text-transform: uppercase;
 
     }
+*/
 
     button {
         background-color: transparent;

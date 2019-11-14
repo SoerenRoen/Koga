@@ -15,9 +15,9 @@ function burgerMenu() {
 //Funktion til Bugermenu
 function toggleMenu() {
     console.log("toggleMenu");
-    document.querySelector(".burgermenu").classList.toggle("hidden");
+    document.querySelector("#menu").classList.toggle("hidden");
 
-    let erSkjult = document.querySelector(".burgermenu").classList.contains("hidden");
+    let erSkjult = document.querySelector("#menu").classList.contains("hidden");
 
     if (erSkjult == true) {
         document.querySelector("#menuknap").textContent = "☰";
