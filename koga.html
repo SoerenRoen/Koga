@@ -68,10 +68,6 @@
 
     </header>
 
-    <template id="koga_template">
-        <p class="tekst"></p>
-    </template>
-
     <h3 class="filosofi_overskrift">Filosofi</h3>
 
     <figure>
@@ -80,22 +76,11 @@
 
 
     <div class="koga_container">
-
-        <div class="item-a">
-
-            <h2 class="koga_overskrift">KOGA</h2>
-
-        </div>
-
-        <div class="item-b">
-
-            <div class="koga_liste">
-
-            </div>
-
-        </div>
-
+        <h2 class="koga_overskrift"></h2>
+        <h2 class="koga_qoute"></h2>
+        <h2 class="koga_tekst"></h2>
     </div>
+
     <footer>
 
         <div id="mykogaandi">
@@ -130,45 +115,26 @@
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", start);
+        document.addEventListener("DOMContentLoaded", hentJson);
 
         const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/koga";
-        let koga = [];
-
-        const skabelon = document.querySelector("#koga_template");
-        const liste = document.querySelector(".koga_liste");
-
-        document.addEventListener("DOMContentLoaded", start);
-
-        function start() {
-            hentJson();
-        }
 
         async function hentJson() {
             const response = await fetch(url);
-            koga = await response.json();
-            vis();
+            const koga = await response.json();
+            vis(koga);
         }
 
-        function vis() {
-            liste.innerHTML = "";
+        function vis(koga) {
 
-            koga.forEach(koga_single => {
-                console.log(koga);
-                const klon = skabelon.cloneNode(true).content;
+            document.querySelector(".koga_overskrift").innerHTML = koga[0].content.rendered;
+            document.querySelector(".koga_qoute").innerHTML = koga[1].content.rendered;
+            document.querySelector(".koga_tekst").innerHTML = koga[2].content.rendered;
 
-                klon.querySelector(".tekst").innerHTML = koga_single.content.rendered;
-                liste.appendChild(klon);
+        };
 
-            });
-
-
-
-            //    cykel.billeder.forEach(b => {});
-        }
+        //    cykel.billeder.forEach(b => {});
     </script>
     <script src="menu_script.js"></script>
 
-</body>
-
-</html>
+</body></html>

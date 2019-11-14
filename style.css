@@ -351,21 +351,19 @@ button:hover {
 
 /*Koga*/
 
+
 .filosofi_overskrift {
     font-family: roc-grotesk-extrawide, sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #52514F;
 }
 
-.koga_overskrift {
-    font-family: interstate, sans-serif;
-    font-weight: 100;
-    font-size: 4rem;
-    color: #0E7DC7;
-}
 
 .koga_container {
+    box-sizing: border-box;
     display: grid;
     grid-template-areas:
         "sidebar"
@@ -374,12 +372,31 @@ button:hover {
 
 .koga_container .item-a {
     grid-area: sidebar;
+    padding: 2rem;
+
     background: papayawhip;
+}
+
+.koga_container .item-a .koga_overskrift {
+    font-family: interstate-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #52514F;
+    font-size: 3rem;
 }
 
 .koga_container .item-b {
     grid-area: main;
+    padding: 3rem;
     background: gold;
+}
+
+.koga_container .item-b .koga_liste {
+    font-family: interstate, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #52514F;
+    font-size: 1rem;
 }
 
 
