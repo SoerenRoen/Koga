@@ -4,6 +4,10 @@
 
 /*html*/
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -21,14 +25,15 @@ figure {
 .bjerg {
     position: absolute;
     background-image: url(img/logo/bjerg.svg);
-    width: 99%;
-    height: 13%;
+    width: 100vw;
+    height: 26%;
     padding: 20px;
-    object-fit: contain;
+    background-repeat: no-repeat;
 }
 
 #bjerg_container {
-    height: 26%;
+    height: auto;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -97,6 +102,7 @@ header {
 
     position: sticky;
     top: 0;
+    z-index: 99;
 }
 
 #logo {
@@ -238,16 +244,20 @@ button:hover {
 
 /*Cykler*/
 
+#cykler_overskrift {
+    display: flex;
+    text-align: center;
 
+}
 
 #cykler_overskrift h1 {
     font-family: roc-grotesk-extrawide, sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 7rem;
     letter-spacing: 1.5rem;
-    text-align: center;
     margin: 0;
+
 }
 
 
@@ -332,6 +342,7 @@ button:hover {
     /*    grid-template-rows: repeat(5, 1fr);*/
     margin-bottom: 20px;
     grid-gap: 15px;
+    position: relative;
 }
 
 /*Koga*/
@@ -492,10 +503,12 @@ footer figure img {
 
 
 @media screen and (min-width: 550px) {
+    /*
     #cykler_overskrift h1 {
         font-size: 7rem;
         letter-spacing: 4rem;
     }
+*/
 
     #alleCykler {
         display: grid;
