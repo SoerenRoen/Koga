@@ -45,40 +45,43 @@
 
     </header>
 
-    <template id="koga_template">
-        <p class="tekst"></p>
-    </template>
+    <section id="about">
 
-
-    <div id="om_1">
-
-        <div class="kasse">
-            <h1 class="about_overskrift">KOGA CENTER COPENHAGEN</h1>
-
-            <div class="billede_bjerg">
+        <div class="about_container_1">
+            <div class="left_side">
+                <h1 class="about_overskrift">KOGA CENTER COPENHAGEN</h1>
                 <img src="img/logo/bjerg.svg" alt="">
+                <h3 class="about_1"></h3>
+            </div>
+            <div class="right_side">
+                <img src="img/gc_2.svg" alt="">
             </div>
         </div>
 
-        <div class="about_liste"></div>
+        <div class="about_container_2">
+            <div class="left_side">
+                <h2 class="about_title">"<span></span>"</h2>
+                <div class="billede2">
+                    <img src="img/GC3.svg" alt="">
+                </div>
+            </div>
+
+            <div class="right_side">
+                <h3 class="about_2"></h3>
+            </div>
+        </div>
 
 
-    </div>
-
-    <div class="billede1">
-        <img src="img/gc_2.svg" alt="">
-    </div>
+    </section>
 
 
+
+
+    <!--
     <div class="billede2">
         <img src="img/%E2%80%9CDet%20er%20k%C3%B8returen,%20der%20s%C3%A6lger%20cyklen%E2%80%9D.svg" alt="">
     </div>
-
-    <div class="about_liste"></div>
-
-    <div class="billede3">
-        <img src="img/GC3.svg" alt="">
-    </div>
+-->
 
 
 
@@ -115,6 +118,31 @@
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+        const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/about";
+
+        async function hentJson() {
+            const response = await fetch(url);
+            const about = await response.json();
+            vis(about);
+        }
+
+        function vis(about) {
+
+            document.querySelector(".about_title span").textContent = about[0].title.rendered;
+            document.querySelector(".about_1").innerHTML = about[1].content.rendered;
+            document.querySelector(".about_2").innerHTML = about[2].content.rendered;
+
+        };
+
+        //    cykel.billeder.forEach(b => {});
+    </script>
+
+    <script src="menu_script.js"></script>
+
+    <!--
+    <script>
         document.addEventListener("DOMContentLoaded", start);
 
         const url = "https://madsgerner.dk/kea_s2/tema9/koga/wordpress/wp-json/wp/v2/about";
@@ -148,5 +176,8 @@
         }
     </script>
     <script src="menu_script.js"></script>
+-->
 
-</body></html>
+</body>
+
+</html>

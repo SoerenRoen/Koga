@@ -428,8 +428,6 @@ button:hover {
 
 .filter_valgt {
     color: #0E7DC7;
-
-
 }
 
 /*Koga*/
@@ -448,103 +446,94 @@ button:hover {
 .koga_container {
     box-sizing: border-box;
     display: grid;
-    grid-template-areas:
-        "sidebar"
-        "main";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
 }
 
-.koga_container .item-a {
-    grid-area: sidebar;
-    padding: 2rem;
-
-    background: papayawhip;
-}
-
-.koga_container .item-a .koga_overskrift {
-    font-family: interstate-condensed, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: #52514F;
-    font-size: 3rem;
-}
-
-.koga_container .item-b {
-    grid-area: main;
-    padding: 3rem;
-    background: gold;
-}
-
-.koga_container .item-b .koga_liste {
+.koga_container h2 {
     font-family: interstate, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #52514F;
+    font-weight: 100;
     font-size: 1rem;
+    color: #52514F;
+    padding: 20px;
 }
 
+.first_koga {
+    grid-column: 1 /span 1;
+}
 
+.second_koga {
+    grid-column: 2 /span 4;
+}
+
+.koga_qoute {
+    font-family: interstate, sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    color: #52514F;
+    text-transform: uppercase;
+}
+
+.koga_overskrift {}
+
+.koga_tekst {}
 
 /*Koga*/
 
 
 /*Om Os*/
 
+#about {
+    padding: 30px;
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+}
 
+.about_container_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*    grid-template-rows: 1fr 1fr;*/
+}
+
+.about_container_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*    grid-template-rows: 1fr 1fr;*/
+}
 
 .about_overskrift {
     font-family: interstate, sans-serif;
     font-weight: 100;
     font-size: 2rem;
     color: #52514F;
-    margin: 5px;
-    padding: 10px;
 }
 
-.about_liste {
-    font-family: interstate, sans-serif;
-    width: 500px;
-    padding: 10px;
-    margin: 5px;
-}
-
-#om_1 {
-    padding: 30px;
-    display: grid;
-    grid-auto-columns: 1fr 1fr;
-}
-
-.kasse {
-    grid-column: 1/2;
-}
-
-.billede_bjerg {
+.left_side {
+    grid-column: 1;
     max-width: 500px;
     padding: 20px;
-    left: 5px;
 }
 
-.billede1 {
-    position top: 100vw;
-    position left: 900vw;
-    max-width: 700px;
-    max-height: 500px;
+.right_side {
+    grid-column: 2;
+    max-width: 500px;
+    padding: 20px;
 }
 
-.billede2 {
-    position top: 600vw;
-    right: 1200vw;
-    max-width: 200px;
-    max-height: 400px;
-
+#about h2 {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    color: #52514F;
 }
 
-.billede3 {
-    max-width: 700px;
-    max-height: 500px;
-    position top: 700vw;
-    position left: 200vw;
+#about h3 {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #52514F;
 }
-
 
 
 /*Footer*/
