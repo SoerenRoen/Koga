@@ -448,11 +448,12 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-<<<<<<< HEAD
+
 }
 
 
 
+/*
 .koga_quote {
     grid-column: 1 / span 1;
     grid-row: 2;
@@ -461,15 +462,16 @@ button:hover {
     font-family: interstate-condensed, sans-serif;
     font-weight: 700;
     font-style: normal;
-=======
+
 
 }
+*/
 
 .koga_container h2 {
     font-family: interstate, sans-serif;
     font-weight: 100;
     font-size: 1rem;
->>>>>>> origin/master
+
     color: #52514F;
     padding: 20px;
 }
@@ -478,7 +480,8 @@ button:hover {
     grid-column: 1 /span 1;
 }
 
-<<<<<<< HEAD
+
+/*
 
 
 .koga_punch {
@@ -492,25 +495,28 @@ button:hover {
     color: #52514F;
     font-size: 1rem;
 }
+*/
 
 .koga_tekst {
     grid-column: 2 / span 4;
     grid-row: 2;
     padding: 3rem;
 
-=======
+}
 .second_koga {
     grid-column: 2 /span 4;
 }
 
+/*
 .koga_qoute {
->>>>>>> origin/master
+
     font-family: interstate, sans-serif;
     font-weight: 500;
     font-size: 4rem;
     color: #52514F;
     text-transform: uppercase;
 }
+*/
 
 .koga_overskrift {}
 
