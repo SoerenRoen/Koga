@@ -317,11 +317,23 @@ button:hover {
     justify-self: center;
 }
 
+.second_part {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.second_part span {
+    color: #35393e;
+}
+
+
+
 #singleCykel h3 {
     font-family: interstate, sans-serif;
     font-weight: 500;
     font-style: normal;
-    color: black;
+    color: #b1b1b1;
     font-size: 1.3rem;
     text-transform: uppercase;
 }
