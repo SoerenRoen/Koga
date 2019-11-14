@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Koga</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/yje2gmd.css">
 </head>
@@ -60,13 +60,20 @@
             <h2 class="title"></h2>
             <img src="" alt="" class="preview_cykel">
         </div>
-        <h3 class="materiale"></h3>
-        <h3 class="weight"></h3>
-        <h3 class="farve"></h3>
-        <h3 class="size"></h3>
+
+
+        <div class="second_part">
+            <h3 class="materiale">Materiale: <br> <span></span> </h3>
+            <h3 class="weight">Vægt: <br> <span></span> </h3>
+            <h3 class="farve">Farve: <br> <span></span> </h3>
+            <h3 class="size">Størrelse: <br> <span></span> </h3>
+            <h3 class="pris">Pris: <br> <span></span> </h3>
+        </div>
+
+
         <img class="imgTech" src="" alt="">
         <p class="beskrivelse"></p>
-        <h3 class="pris"></h3>
+
 
         <section class="imgcontainer"></section>
     </section>
@@ -183,14 +190,15 @@
                     // liste.appendChild(klon);
                     // });
 
-                    document.querySelector(".materiale").textContent += "Marteriale: " + cykel.materiale;
-                    document.querySelector(".weight").textContent += "Vægt: " + cykel.vgt;
-                    document.querySelector(".farve").textContent += "Farve: " + cykel.farve;
-                    document.querySelector(".size").textContent += "Størrelser: " + cykel.ml;
+                    document.querySelector(".materiale span").textContent = cykel.materiale;
+                    document.querySelector(".weight span").textContent = cykel.vgt;
+                    document.querySelector(".farve span").textContent = cykel.farve;
+                    document.querySelector(".size span").textContent = cykel.ml;
+                    document.querySelector(".pris span").textContent = cykel.pris + ".- DKK";
+
                     document.querySelector(".imgTech").src = cykel.grafisk_tegning.guid;
                     document.querySelector(".imgTech").alt = cykel.title.rendered;
                     document.querySelector(".beskrivelse").textContent = cykel.beskrivelse;
-                    document.querySelector(".pris").textContent += "Pris: " + cykel.pris + ".- DKK";
 
 
 
