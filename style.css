@@ -503,24 +503,20 @@ button:hover {
     padding: 3rem;
 
 }
+
 .second_koga {
     grid-column: 2 /span 4;
 }
 
-/*
-.koga_qoute {
+.koga_quote {
 
-    font-family: interstate, sans-serif;
-    font-weight: 500;
-    font-size: 4rem;
+    font-family: interstate-condensed, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
     color: #52514F;
-    text-transform: uppercase;
 }
-*/
 
-.koga_overskrift {}
 
-.koga_tekst {}
 
 /*Koga*/
 

@@ -67,7 +67,7 @@
 -->
 
         <div class="first_koga">
-            <h3 class="koga_qoute"></h3>
+            <h3 class="koga_quote"></h3>
             <h2 class="koga_overskrift"></h2>
         </div>
         <div class="second_koga">
@@ -123,17 +123,14 @@
         function vis(koga) {
             document.querySelector(".koga_quote").innerHTML = koga[1].content.rendered;
 
-            document.querySelector(".koga_punch").innerHTML = koga[0].content.rendered;
+            document.querySelector(".koga_overskrift").innerHTML = koga[0].content.rendered;
 
             document.querySelector(".koga_tekst").innerHTML = koga[2].content.rendered;
 
         };
 
         //    cykel.billeder.forEach(b => {});
-
     </script>
     <script src="menu_script.js"></script>
 
-</body>
-
-</html>
+</body></html>
