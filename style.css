@@ -145,6 +145,20 @@ a:hover {
     width: 1.3rem;
 }
 
+button:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    color: #2c80c5;
+
+}
+
+#menu button:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    color: #2c80c5;
+
+}
+
 
 /*MENU I WEB*/
 @media only screen and (min-width: 1080px) {
@@ -260,7 +274,7 @@ a:hover {
     }
 
 
-    #menu a.active {
+    #menu a:active {
         color: #2c80c5;
 
     }
@@ -396,7 +410,7 @@ a:hover {
 
 #filter_knapper {
     display: grid;
-    /*    grid-template-rows: repeat(5, 1fr);*/
+    grid-template-rows: 1fr;
     margin-bottom: 20px;
     grid-gap: 15px;
     position: relative;
@@ -414,8 +428,6 @@ a:hover {
 
 .filter_valgt {
     color: #0E7DC7;
-
-
 }
 
 /*Koga*/
@@ -436,6 +448,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+<<<<<<< HEAD
 }
 
 
@@ -448,10 +461,24 @@ a:hover {
     font-family: interstate-condensed, sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: #52514F;
-    font-size: 3rem;
+=======
+
 }
 
+.koga_container h2 {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+>>>>>>> origin/master
+    color: #52514F;
+    padding: 20px;
+}
+
+.first_koga {
+    grid-column: 1 /span 1;
+}
+
+<<<<<<< HEAD
 
 
 .koga_punch {
@@ -471,76 +498,79 @@ a:hover {
     grid-row: 2;
     padding: 3rem;
 
-    font-family: interstate, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #52514F;
-    font-size: 1rem;
+=======
+.second_koga {
+    grid-column: 2 /span 4;
 }
 
+.koga_qoute {
+>>>>>>> origin/master
+    font-family: interstate, sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    color: #52514F;
+    text-transform: uppercase;
+}
 
+.koga_overskrift {}
+
+.koga_tekst {}
 
 /*Koga*/
 
 
 /*Om Os*/
 
+#about {
+    padding: 30px;
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+}
 
+.about_container_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*    grid-template-rows: 1fr 1fr;*/
+}
+
+.about_container_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*    grid-template-rows: 1fr 1fr;*/
+}
 
 .about_overskrift {
     font-family: interstate, sans-serif;
     font-weight: 100;
     font-size: 2rem;
     color: #52514F;
-    margin: 5px;
-    padding: 10px;
 }
 
-.about_liste {
-    font-family: interstate, sans-serif;
-    width: 500px;
-    padding: 10px;
-    margin: 5px;
-}
-
-#om_1 {
-    padding: 30px;
-    display: grid;
-    grid-auto-columns: 1fr 1fr;
-}
-
-.kasse {
-    grid-column: 1/2;
-}
-
-.billede_bjerg {
+.left_side {
+    grid-column: 1;
     max-width: 500px;
     padding: 20px;
-    left: 5px;
 }
 
-.billede1 {
-    position top: 100vw;
-    position left: 900vw;
-    max-width: 700px;
-    max-height: 500px;
+.right_side {
+    grid-column: 2;
+    max-width: 500px;
+    padding: 20px;
 }
 
-.billede2 {
-    position top: 600vw;
-    right: 1200vw;
-    max-width: 200px;
-    max-height: 400px;
-
+#about h2 {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    color: #52514F;
 }
 
-.billede3 {
-    max-width: 700px;
-    max-height: 500px;
-    position top: 700vw;
-    position left: 200vw;
+#about h3 {
+    font-family: interstate, sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #52514F;
 }
-
 
 
 /*Footer*/
@@ -587,7 +617,7 @@ footer figure img {
 /* MEDIA QUERIES */
 
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 880px) {
     /*
     #cykler_overskrift h1 {
         font-size: 7rem;
