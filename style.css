@@ -434,19 +434,17 @@ a:hover {
 .koga_container {
     box-sizing: border-box;
     display: grid;
-    grid-template-areas:
-        "sidebar"
-        "main";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.koga_container .item-a {
-    grid-area: sidebar;
+
+
+.koga_quote {
+    grid-column: 1 / span 1;
+    grid-row: 2;
     padding: 2rem;
 
-    background: papayawhip;
-}
-
-.koga_container .item-a .koga_overskrift {
     font-family: interstate-condensed, sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -454,13 +452,25 @@ a:hover {
     font-size: 3rem;
 }
 
-.koga_container .item-b {
-    grid-area: main;
+
+
+.koga_punch {
+    grid-column: 1 / span 1;
+    grid-row: 2;
     padding: 3rem;
-    background: gold;
+
+    font-family: interstate, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #52514F;
+    font-size: 1rem;
 }
 
-.koga_container .item-b .koga_liste {
+.koga_tekst {
+    grid-column: 2 / span 4;
+    grid-row: 2;
+    padding: 3rem;
+
     font-family: interstate, sans-serif;
     font-weight: 400;
     font-style: normal;
