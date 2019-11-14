@@ -4,6 +4,10 @@
 
 /*html*/
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -21,46 +25,54 @@ figure {
 .bjerg {
     position: absolute;
     background-image: url(img/logo/bjerg.svg);
-    width: 99%;
-    height: 13%;
+    width: 100vw;
+    height: 26%;
     padding: 20px;
-    object-fit: contain;
+    background-repeat: no-repeat;
 }
 
 #bjerg_container {
-    height: 26%;
+    height: auto;
+    width: 100%;
     overflow: hidden;
 }
 
 
-/*Menu*/
 
 
-#navigation {
-    display: none;
-}
+/*Menu / Burger menu*/
 
-.burgermenu {
+#menu {
     transition: transform .3s;
     transform-origin: top;
     position: fixed;
     right: 0;
-    top: 0;
+    top: ;
     background-color: #f3f2f1;
-    width: 100vw;
-    height: 100vh;
-    z-index: 40;
-    padding: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+#menu a {
+    margin: 10px 0 50px;
+}
+
+#menu a:nth-child(1) {
+    margin-top: 40px;
+}
+
 
 #menuknap {
     display: inline-block;
     z-index: 100;
     right: 10vw;
     position: fixed;
+    color: #35393E;
     cursor: pointer;
 
 
@@ -69,24 +81,22 @@ figure {
     font-style: normal;
     font-size: 30px;
 
-
     width: 40px;
     height: 40px;
     text-align: center;
 
-    display: flex;
-
 }
 
 #menuknap:hover {
-    color: white;
+    color: #2c80c5;
 }
 
 
 .hidden {
-    transform: translateY(-100%);
+    transform: translateX(100%);
     opacity: 0;
 }
+
 
 header {
     display: flex;
@@ -97,6 +107,8 @@ header {
 
     position: sticky;
     top: 0;
+
+    z-index: 99;
 }
 
 #logo {
@@ -106,7 +118,7 @@ header {
 button {
     background-color: transparent;
     border: none;
-    /*    margin: 0 20px;*/
+    margin: 0 20px;
     color: black;
 
     float: right;
@@ -114,11 +126,18 @@ button {
     font-size: 1.5rem;
     transform: scale(1);
     transition: .5s;
+
 }
 
-button:hover {
+a:hover {
     transform: scale(1.1);
     transition: .5s;
+    color: #2c80c5;
+
+
+}
+
+#menu button:active {
     color: #2c80c5;
 }
 
@@ -126,19 +145,54 @@ button:hover {
     width: 1.3rem;
 }
 
-@media only screen and (min-width: 720px) {
+
+/*MENU I WEB*/
+@media only screen and (min-width: 1080px) {
+
+    #nav {
+        display: flex;
+        align-items: center;
+    }
 
 
     #menuknap {
         display: none;
     }
 
-    .burgermenu {
-        display: none;
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu li {
+        display: inline-block;
+    }
+
+    #menu a {
+        margin: 0px 0 0px;
+    }
+
+    #menu a:nth-child(1) {
+        margin-top: 0px;
+    }
+
+    header #menu {
+        justify-content: space-between;
+        background-color: none;
+        width: 50%;
+        height: 70px;
+        z-index: 40;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
     }
 
 
-    #navigation {
+    #menuknap {
+        display: none;
+    }
+
+    #menu {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -149,7 +203,7 @@ button:hover {
         padding: 0 20px;
     }
 
-    #navigation button {
+    #menu button {
         font-family: interstate, sans-serif;
         font-weight: 500;
         font-style: normal;
@@ -173,28 +227,9 @@ button:hover {
 
     #logo {
         width: 250px;
+        z-index: 100;
     }
 
-    #navigation {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        float: right;
-
-        width: 50%;
-
-        padding: 0 20px;
-    }
-
-    #navigation button {
-        font-family: interstate, sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        color: #35393e;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-
-    }
 
     button {
         background-color: transparent;
@@ -207,13 +242,29 @@ button:hover {
         font-size: 1.5rem;
         transform: scale(1);
         transition: .5s;
+        cursor: pointer;
     }
 
     button:hover {
         transform: scale(1.1);
         transition: .5s;
         color: #2c80c5;
+
     }
+
+    #menu button:hover {
+        transform: scale(1.1);
+        transition: .5s;
+        color: #2c80c5;
+
+    }
+
+
+    #menu a.active {
+        color: #2c80c5;
+
+    }
+
 
     .search {
         width: 1.3rem;
@@ -238,16 +289,20 @@ button:hover {
 
 /*Cykler*/
 
-
+#cykler_overskrift {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
 
 #cykler_overskrift h1 {
     font-family: roc-grotesk-extrawide, sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 3rem;
+    font-size: 10vw;
     letter-spacing: 1.5rem;
-    text-align: center;
     margin: 0;
+
 }
 
 
@@ -307,11 +362,23 @@ button:hover {
     justify-self: center;
 }
 
+.second_part {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+
+.second_part span {
+    color: #35393e;
+}
+
+
+
 #singleCykel h3 {
     font-family: interstate, sans-serif;
     font-weight: 500;
     font-style: normal;
-    color: black;
+    color: #b1b1b1;
     font-size: 1.3rem;
     text-transform: uppercase;
 }
@@ -332,6 +399,7 @@ button:hover {
     /*    grid-template-rows: repeat(5, 1fr);*/
     margin-bottom: 20px;
     grid-gap: 15px;
+    position: relative;
 }
 
 /*Koga*/
@@ -341,6 +409,7 @@ button:hover {
 #filter_knapper button {
     border-radius: 5%;
     font-weight: 100;
+
 }
 
 .filter_valgt {
@@ -509,10 +578,12 @@ footer figure img {
 
 
 @media screen and (min-width: 550px) {
+    /*
     #cykler_overskrift h1 {
         font-size: 7rem;
         letter-spacing: 4rem;
     }
+*/
 
     #alleCykler {
         display: grid;
@@ -523,6 +594,7 @@ footer figure img {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         margin-bottom: 20px;
+        grid-gap: 0px
     }
 
     .koga_container {
