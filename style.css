@@ -145,6 +145,20 @@ a:hover {
     width: 1.3rem;
 }
 
+button:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    color: #2c80c5;
+
+}
+
+#menu button:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    color: #2c80c5;
+
+}
+
 
 /*MENU I WEB*/
 @media only screen and (min-width: 1080px) {
@@ -260,7 +274,7 @@ a:hover {
     }
 
 
-    #menu a.active {
+    #menu a:active {
         color: #2c80c5;
 
     }
@@ -384,7 +398,7 @@ a:hover {
 
 #filter_knapper {
     display: grid;
-    /*    grid-template-rows: repeat(5, 1fr);*/
+    grid-template-rows: 1fr;
     margin-bottom: 20px;
     grid-gap: 15px;
     position: relative;
@@ -548,7 +562,7 @@ footer figure img {
 /* MEDIA QUERIES */
 
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 880px) {
     /*
     #cykler_overskrift h1 {
         font-size: 7rem;
