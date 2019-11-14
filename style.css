@@ -38,10 +38,9 @@ figure {
 }
 
 
-/*Menu*/
 
 
-/*Menu*/
+/*Menu / Burger menu*/
 
 #menu {
     transition: transform .3s;
@@ -147,6 +146,7 @@ a:hover {
 }
 
 
+/*MENU I WEB*/
 @media only screen and (min-width: 1080px) {
 
     #nav {
@@ -188,21 +188,6 @@ a:hover {
     }
 
 
-
-    /*
-    header nav a {
-        font-family: interstate, sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        color: #35393e;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-
-    }
-*/
-
-
-
     #menuknap {
         display: none;
     }
@@ -214,7 +199,6 @@ a:hover {
         float: right;
 
         width: 50%;
-        /*        height: 50%;*/
 
         padding: 0 20px;
     }
@@ -246,29 +230,6 @@ a:hover {
         z-index: 100;
     }
 
-
-    /*
-    .navigation {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        float: right;
-
-        width: 50%;
-
-        padding: 0 20px;
-    }
-
-    .navigation button {
-        font-family: interstate, sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        color: #35393e;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-
-    }
-*/
 
     button {
         background-color: transparent;
