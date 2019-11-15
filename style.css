@@ -330,16 +330,44 @@ button:hover {
     font-family: interstate, sans-serif;
     font-weight: 100;
     font-size: 1rem;
-    color: #52514F;
+    color: #f3f2f1;
+    background-color: #0e7dc7;
+    padding: 10px;
 }
 
-#cykel img {
+#cykel .img {
+    opacity: 1;
+    display: block;
     width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+#cykel .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#cykel:hover .img {
+    opacity: 0.3;
+}
+
+#cykel:hover .middle {
+    opacity: 1;
 }
 
 
 #cykel {
     padding: 0.5rem;
+    position: relative;
+    width: 100%;
 }
 
 #alleCykler {
@@ -568,8 +596,8 @@ button:hover {
     font-style: normal;
     font-size: 2.5rem;
     text-transform: uppercase;
-    color: #52514F;
-    margin: 40px 0px 0px 60px;
+    color: #35393E;
+    margin: 40px 0px 0px 20px;
 }
 
 #about h2 {
