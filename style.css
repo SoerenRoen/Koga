@@ -314,7 +314,7 @@ button:hover {
 }
 
 #cykler_overskrift h1 {
-    font-family: roc-grotesk-extrawide, sans-serif;
+    font-family: roc-grotesk-extrawidelight, sans-serif;
     font-weight: 200;
     font-style: normal;
     font-size: 10vw;
@@ -551,16 +551,30 @@ button:hover {
     padding: 20px;
 }
 
+.left_side img {
+    padding: 20px 0px 20px 0px;
+}
+
 .right_side {
     grid-column: 2;
     max-width: 500px;
     padding: 20px;
 }
 
+#about h1 {
+    font-family: roc-grotesk-extrawide, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #52514F;
+    margin: 40px 0px 0px 60px;
+}
+
 #about h2 {
-    font-family: interstate, sans-serif;
-    font-weight: 100;
-    font-size: 2rem;
+    font-family: interstate-condensed, sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
     color: #52514F;
 }
 
