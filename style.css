@@ -402,11 +402,21 @@ button:hover {
 }
 
 .first_part .title {
+    font-family: roc-grotesk-extrawide, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #35393E;
+    margin: 40px 0px 0px 20px;
+}
+
+#singleCykel p {
     font-family: interstate, sans-serif;
     font-weight: 100;
-    font-size: 2rem;
-    color: #2c80c5;
-    justify-self: center;
+    font-size: 1rem;
+    color: #52514F;
+    padding: 20px;
 }
 
 .second_part {
@@ -418,6 +428,8 @@ button:hover {
 .second_part span {
     color: #35393e;
 }
+
+.imgSingle {}
 
 
 
