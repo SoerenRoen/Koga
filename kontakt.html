@@ -51,20 +51,28 @@
 
     <h1 class="kontakt">KONTAKT</h1>
 
-    <template id="kontakt_id">
-        <div class="kontakt_div">
-            <h2 class="kontakt_overskrift"></h2>
-            <p class="kontakt_tekst"></p>
-        </div>
-    </template>
+    <figure class="kontakt_bjerg">
+        <img src="img/logo/bjerg.svg" alt="">
+    </figure>
 
-    <div class="kontakt_liste"></div>
+    <section id="kontakt">
 
-    <div id="kort">
-        <div class="mapouter">
-            <div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=peterbangsvej%2018&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.emojilib.com"></a></div>
+        <template id="kontakt_id">
+            <div class="kontakt_div">
+                <h2 class="kontakt_overskrift"></h2>
+                <p class="kontakt_tekst"></p>
+            </div>
+        </template>
+
+        <div class="kontakt_liste"></div>
+
+        <div id="kort">
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=peterbangsvej%2018&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.emojilib.com"></a></div>
+            </div>
         </div>
-    </div>
+
+    </section>
 
 
     <footer>
@@ -138,7 +146,6 @@
 
             //    cykel.billeder.forEach(b => {});
         }
-
     </script>
 
     <script src="menu_script.js"></script>
