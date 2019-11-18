@@ -363,6 +363,7 @@ button:hover {
 
 #cykel:hover .middle {
     opacity: 1;
+    cursor: pointer;
 }
 
 
@@ -389,15 +390,18 @@ button:hover {
 
 .first_part {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    background-color: white;
+    opacity: .5;
 }
 
 .first_part img {
-    height: 50vw;
+    height: 40vw;
     width: auto;
     float: right;
-    opacity: 0.5;
+    /*    opacity: 0.5;*/
     position: relative;
     /*    grid-column-start: 2;*/
 
