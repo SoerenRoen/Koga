@@ -806,17 +806,15 @@ footer figure img {
 
 /*Kontakt*/
 
-/*
-.kontakt h1 {
+.kontakt {
     font-family: interstate, sans-serif;
     font-weight: 500;
     font-style: normal;
     color: #8e8e8e;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     margin: 10px;
 }
-*/
 
 .kontakt_liste {
     display: flex;
