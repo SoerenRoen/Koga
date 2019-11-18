@@ -796,7 +796,7 @@ footer figure img {
 
 }
 
-@media screen and(min-width: 800px) {
+@media screen and (min-width: 800px) {
     .koga_container {
         grid-template-areas:
             "sidebar"
