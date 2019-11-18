@@ -137,9 +137,6 @@ a:hover {
 
 }
 
-#menu button:active {
-    color: #2c80c5;
-}
 
 .search {
     width: 1.3rem;
@@ -225,6 +222,10 @@ button:hover {
         font-size: 1.2rem;
         text-transform: uppercase;
 
+    }
+
+    #menu button:active {
+        color: #2c80c5;
     }
 
 
