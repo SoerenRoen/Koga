@@ -30,7 +30,7 @@ figure {
     position: absolute;
     background-image: url(img/logo/bjerg.svg);
     width: 100vw;
-    height: 35%;
+    height: 41%;
     padding: 20px;
     background-repeat: no-repeat;
     margin: 40px 0px 40px 0px;
@@ -128,10 +128,16 @@ button {
 
     float: right;
 
-    font-size: 1.5rem;
     transform: scale(1);
     transition: .5s;
 
+
+    font-family: interstate, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #35393e;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 a:hover {
@@ -539,13 +545,13 @@ button:hover {
     font-family: roc-grotesk-extrawide, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #35393E;
 }
 
 #koga_bjerg img {
-    padding: 0px 40px 80px 40px;
+    padding: 0px 0px 80px 0px;
 }
 
 
@@ -688,8 +694,11 @@ button:hover {
 
 .right_side {
     grid-column: 2;
-    max-width: 500px;
+    max-width: 800px;
     padding: 20px;
+
+    display: flex;
+    align-items: center;
 }
 
 #about h1 {
@@ -842,12 +851,13 @@ footer figure img {
 /*Kontakt*/
 
 .kontakt {
-    font-family: interstate, sans-serif;
-    font-weight: 500;
+    font-family: roc-grotesk-extrawide, sans-serif;
+    font-weight: 300;
     font-style: normal;
-    color: #8e8e8e;
     font-size: 2rem;
     text-transform: uppercase;
+    color: #35393E;
+
     margin: 10px;
     text-align: center;
 }
@@ -877,7 +887,7 @@ footer figure img {
     font-weight: 500;
     font-style: normal;
     color: #8e8e8e;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     margin: 10px;
 }
@@ -896,9 +906,9 @@ footer figure img {
 }
 
 #kort {
-    /*    width: 100vw;*/
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
