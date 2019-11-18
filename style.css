@@ -822,6 +822,7 @@ footer figure img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-bottom: 2%;
 }
 
 .kontakt_overskrift {
@@ -847,6 +848,12 @@ footer figure img {
     margin: 10px;
 }
 
+#kort {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
 
 /*Google Maps*/
 

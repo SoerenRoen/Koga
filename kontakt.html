@@ -51,21 +51,6 @@
 
     <h1 class="kontakt">KONTAKT</h1>
 
-    <article class="koga_rubrik1">
-        <div class="koga_tekst">
-            <p></p>
-        </div>
-    </article>
-
-    <article class="koga_rubrik2">
-        <div class="koga_tekst">
-            <p></p>
-        </div>
-        <figure>
-            <img src="" alt="">
-        </figure>
-    </article>
-
     <template id="kontakt_id">
         <div class="kontakt_div">
             <h2 class="kontakt_overskrift"></h2>
@@ -75,8 +60,10 @@
 
     <div class="kontakt_liste"></div>
 
-    <div class="mapouter">
-        <div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=peterbangsvej%2018&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.emojilib.com"></a></div>
+    <div id="kort">
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="600" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=peterbangsvej%2018&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.emojilib.com"></a></div>
+        </div>
     </div>
 
 
@@ -151,8 +138,11 @@
 
             //    cykel.billeder.forEach(b => {});
         }
+
     </script>
 
     <script src="menu_script.js"></script>
 
-</body></html>
+</body>
+
+</html>
