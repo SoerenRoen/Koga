@@ -542,7 +542,6 @@ button:hover {
     font-size: 2.5rem;
     text-transform: uppercase;
     color: #35393E;
-    margin: 40px 0px 0px 60px;
 }
 
 #koga_bjerg img {
@@ -552,25 +551,44 @@ button:hover {
 
 .koga_container {
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0px 40px 20px 40px;
 }
 
+@media screen and (min-width: 700px) {
+
+    .koga_container {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        margin: 0px 40px 20px 40px;
+    }
+
+    .koga_tekst {
+        grid-column: 2 / span 3;
+    }
+
+    .first_koga {
+        grid-column: 1 /span 1;
+    }
+
+    .second_koga {
+        grid-column: 2 /span 3;
+    }
+}
 
 .koga_container h2 {
     font-family: interstate, sans-serif;
     font-weight: 100;
     font-size: 1rem;
-
     color: #52514F;
     padding: 20px;
 }
 
 .first_koga {
-    grid-column: 1 /span 1;
-    padding: 20px;
+    /*    padding: 20px;*/
 }
 
 .koga_quote {
@@ -586,22 +604,17 @@ button:hover {
 }
 
 .koga_tekst {
-    grid-column: 2 / span 4;
     padding: 3rem;
 }
 
-.koga_tekst p {
-    padding: 12px;
-    margin-top: 8px;
-}
+.koga_tekst p {}
 
 .koga_tekst a {
     color: #0E7DC7;
 }
 
 .second_koga {
-    grid-column: 2 /span 4;
-    padding: 20px;
+    /*    padding: 20px;*/
 }
 
 
@@ -616,29 +629,52 @@ button:hover {
 /*Om Os*/
 
 #about {
-    padding: 30px;
-    display: grid;
-    grid-auto-columns: 1fr 1fr;
+    padding: 2%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+
 }
 
-.about_container_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /*    grid-template-rows: 1fr 1fr;*/
+@media screen and (min-width: 1000px) {
+    #about {
+        display: grid;
+        grid-auto-columns: 1fr 1fr;
+    }
+
+    .about_container_1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /*    grid-template-rows: 1fr 1fr;*/
+    }
+
+    .about_container_2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /*    grid-template-rows: 1fr 1fr;*/
+    }
+
+    #about h1 {
+        font-family: roc-grotesk-extrawide, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: #35393E;
+    }
 }
 
-.about_container_2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /*    grid-template-rows: 1fr 1fr;*/
-}
 
+
+/*
 .about_overskrift {
     font-family: interstate, sans-serif;
     font-weight: 100;
     font-size: 2rem;
     color: #52514F;
 }
+*/
 
 .left_side {
     grid-column: 1;
@@ -660,10 +696,9 @@ button:hover {
     font-family: roc-grotesk-extrawide, sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #35393E;
-    margin: 40px 0px 0px 20px;
 }
 
 #about h2 {
@@ -814,13 +849,27 @@ footer figure img {
     font-size: 2rem;
     text-transform: uppercase;
     margin: 10px;
+    text-align: center;
+}
+
+.kontakt_bjerg {
+    padding: 40px;
+}
+
+#kontakt {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .kontakt_liste {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
-    margin-bottom: 2%;
+    text-align: center;
+    margin: 5%;
+
 }
 
 .kontakt_overskrift {
@@ -828,7 +877,7 @@ footer figure img {
     font-weight: 500;
     font-style: normal;
     color: #8e8e8e;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     margin: 10px;
 }
@@ -838,7 +887,7 @@ footer figure img {
     font-weight: 500;
     font-style: normal;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
 }
 
@@ -847,7 +896,7 @@ footer figure img {
 }
 
 #kort {
-    width: 100vw;
+    /*    width: 100vw;*/
     display: flex;
     justify-content: center;
     overflow: hidden;
