@@ -166,7 +166,7 @@ button:hover {
 
 
 /*MENU I WEB*/
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1200px) {
 
     #nav {
         display: flex;
