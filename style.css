@@ -65,6 +65,24 @@ figure {
 
 #menu a {
     margin: 10px 0 50px;
+
+    background-color: transparent;
+    border: none;
+    color: black;
+    text-decoration: none;
+
+    float: right;
+
+    transform: scale(1);
+    transition: .5s;
+
+
+    font-family: interstate, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #35393e;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 #menu a:nth-child(1) {
@@ -160,7 +178,7 @@ button:hover {
 
 }
 
-#menu button:hover {
+#menu a:hover {
     transform: scale(1.1);
     transition: .5s;
     color: #2c80c5;
@@ -191,11 +209,35 @@ button:hover {
     }
 
     #menu a {
-        margin: 0px 0 0px;
+        margin: 0px 0px 0 0px;
+
+        background-color: transparent;
+        border: none;
+        color: black;
+        text-decoration: none;
+
+        float: right;
+
+        transform: scale(1);
+        transition: .5s;
+
+
+        font-family: interstate, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #35393e;
+        font-size: 1.2rem;
+        text-transform: uppercase;
     }
 
     #menu a:nth-child(1) {
         margin-top: 0px;
+
+    }
+
+    #menu a:nth-child(4) {
+        margin-right: 50px;
+
     }
 
     header #menu {
@@ -225,17 +267,8 @@ button:hover {
         padding: 0 20px;
     }
 
-    #menu button {
-        font-family: interstate, sans-serif;
-        font-weight: 500;
-        font-style: normal;
-        color: #35393e;
-        font-size: 1.2rem;
-        text-transform: uppercase;
 
-    }
-
-    #menu button:active {
+    #menu a:active {
         color: #2c80c5;
     }
 
@@ -278,24 +311,16 @@ button:hover {
 
     }
 
-    #menu button:hover {
+    #menu a:hover {
         transform: scale(1.1);
         transition: .5s;
         color: #2c80c5;
 
     }
 
-
     #menu a:active {
         color: #2c80c5;
-
     }
-
-
-    .search {
-        width: 1.3rem;
-    }
-
 
 }
 
@@ -851,7 +876,7 @@ footer figure img {
 
 }
 
-@media screen and(min-width: 800px) {
+@media screen and (min-width: 800px) {
     .koga_container {
         grid-template-areas:
             "sidebar"
